@@ -15,8 +15,10 @@ class UnionFind{
         UnionFind(){};
         ~UnionFind();
 
-        bool Union(LinkedListNode* const u_node, LinkedListNode* const v_node);
-        LinkedListNode* const Find(LinkedListNode* const u_node);
+        bool                    Union(LinkedListNode* const u_node, LinkedListNode* const v_node);
+        LinkedListNode* const   Find(LinkedListNode* const u_node);
+        inline          void    PrintParent(LinkedListNode* const u_node){std::cout<<"parent["<<u_node->GetName()<<"] = "<<parent[u_node]->GetName()<<std::endl;};
+        inline          void    PrintWeight(LinkedListNode* const u_node){std::cout<<"weight["<<u_node->GetName()<<"] = "<<weight[u_node]<<std::endl;};
 };
 
 #endif

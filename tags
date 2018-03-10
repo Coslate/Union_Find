@@ -57,6 +57,8 @@ MAIN_OBJECT_SOURCE	../Linked_List_ex/Makefile	/^MAIN_OBJECT_SOURCE = $(MAIN_OBJE
 MAIN_OBJECT_SOURCE	./Makefile	/^MAIN_OBJECT_SOURCE = $(MAIN_OBJECT_NAME).cpp$/;"	m
 MAIN_OBJECT_SOURCE_MAIN	./Makefile	/^MAIN_OBJECT_SOURCE_MAIN = $(MAIN_OBJECT_NAME_MAIN).cpp$/;"	m
 PrintList	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::PrintList(const bool debug_addr, const bool debug_name, const bool debug_key){$/;"	f	class:LinkedList
+PrintParent	./include/Union_Find.h	/^        inline          void    PrintParent(LinkedListNode* const u_node){std::cout<<"parent["<<u_node->GetName()<<"] = "<<parent[u_node]->GetName()<<std::endl;};$/;"	f	class:UnionFind
+PrintWeight	./include/Union_Find.h	/^        inline          void    PrintWeight(LinkedListNode* const u_node){std::cout<<"weight["<<u_node->GetName()<<"] = "<<weight[u_node]<<std::endl;};$/;"	f	class:UnionFind
 Reverse	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::Reverse(){$/;"	f	class:LinkedList
 SetData	../Linked_List_ex/include/Linked_List.h	/^        inline void             SetData(const int val){data = val;};$/;"	f	class:LinkedListNode
 SetName	../Linked_List_ex/include/Linked_List.h	/^        inline void             SetName(const std::string val){name = val;};$/;"	f	class:LinkedListNode
