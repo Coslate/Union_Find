@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <unordered_map>
 #include <Linked_List.h>
 
 class UnionFind{
@@ -12,6 +13,8 @@ class UnionFind{
 
     public : 
         UnionFind(){};
+        ~UnionFind();
+
         bool Union(LinkedListNode* const u_node, LinkedListNode* const v_node);
         LinkedListNode* const Find(LinkedListNode* const u_node);
 };

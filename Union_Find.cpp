@@ -7,3 +7,7 @@
 #include <iomanip>
 #include <cmath>
 #include <Union_Find.h>
+
+UnionFind::~UnionFind(){
+    std::cout<<"It is UnionFind destructor."<<std::endl;
+}

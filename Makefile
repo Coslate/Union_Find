@@ -1,9 +1,11 @@
 #declare variable
 CC = g++
+INCLUDE_FILES = ./include ../Linked_List_ex/include
+INCLUDE_FLAGS = $(foreach d, $(INCLUDE_FILES), -I $d)
 CTAGS_UTIL = /usr/local/bin/
-INCLUDE_FILES = ./include
-INCLUDE_FLAGS = -I $(INCLUDE_FILES)
-CFLAGS = -g -Wall -O3 
+CTAGS_FILES = ./include ../Linked_List_ex ../Linked_List_ex/include
+CTAGS_FLAGS = $(foreach d, $(CTAGS_FILES),-a $d/*)
+CFLAGS = -g -Wall -O3 -std=c++11 
 COMPILE_FLAGS = -c
 MAIN_OBJECT_NAME_MAIN = Union_Find_main
 MAIN_OBJECT_SOURCE_MAIN = $(MAIN_OBJECT_NAME_MAIN).cpp
@@ -22,7 +24,7 @@ Union_Find : $(MAIN_OBJECT_SOURCE)
 
 all_file_tags : 
 	$(CTAGS_UTIL)ctags -R ./*
-	$(CTAGS_UTIL)ctags -a $(INCLUDE_FILES)/*
+	$(CTAGS_UTIL)ctags $(CTAGS_FLAGS)
 
 clean :
 	rm -rf $(MAIN_OBJECT_EXEC_OUTPUT)$(MAIN_OBJECT_EXEC)
