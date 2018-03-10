@@ -3,7 +3,7 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+!_TAG_PROGRAM_VERSION	5.8	//
 CC	../Linked_List_ex/Makefile	/^CC = g++$/;"	m
 CC	./Makefile	/^CC = g++$/;"	m
 CFLAGS	../Linked_List_ex/Makefile	/^CFLAGS = -g -Wall -O3 $/;"	m
@@ -17,6 +17,7 @@ CTAGS_UTIL	./Makefile	/^CTAGS_UTIL = \/usr\/local\/bin\/$/;"	m
 CleanAll	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::CleanAll(){$/;"	f	class:LinkedList
 Delete	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::Delete(LinkedListNode* const deleted_node){$/;"	f	class:LinkedList
 Delete	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::Delete(const int value){$/;"	f	class:LinkedList
+Find	./Union_Find.cpp	/^LinkedListNode* const UnionFind::Find(LinkedListNode* const u_node){$/;"	f	class:UnionFind
 GetAllData	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::GetAllData(int* const input_arr){$/;"	f	class:LinkedList
 GetData	../Linked_List_ex/include/Linked_List.h	/^        inline int              GetData(){return data;};$/;"	f	class:LinkedListNode
 GetFristNode	../Linked_List_ex/include/Linked_List.h	/^        inline LinkedListNode*  GetFristNode(){return first;};$/;"	f	class:LinkedList
@@ -37,6 +38,7 @@ InsertFront	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::InsertFront(con
 InsertTail	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::InsertTail(LinkedListNode* const inserted_node){$/;"	f	class:LinkedList
 InsertTail	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::InsertTail(const int value){$/;"	f	class:LinkedList
 InsertTail	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::InsertTail(const int value, const std::string val_str){$/;"	f	class:LinkedList
+Link	./Union_Find.cpp	/^void UnionFind::Link(LinkedListNode* const u_node, LinkedListNode* const v_node){$/;"	f	class:UnionFind
 LinkedList	../Linked_List_ex/include/Linked_List.h	/^        LinkedList() : first(NULL), last(NULL), size_of_list(0){};$/;"	f	class:LinkedList
 LinkedList	../Linked_List_ex/include/Linked_List.h	/^class LinkedList{$/;"	c
 LinkedListNode	../Linked_List_ex/include/Linked_List.h	/^        LinkedListNode() : data(0), name("NULL"), next(NULL){};$/;"	f	class:LinkedListNode
@@ -59,10 +61,11 @@ Reverse	../Linked_List_ex/Linked_List.cpp	/^void LinkedList::Reverse(){$/;"	f	cl
 SetData	../Linked_List_ex/include/Linked_List.h	/^        inline void             SetData(const int val){data = val;};$/;"	f	class:LinkedListNode
 SetName	../Linked_List_ex/include/Linked_List.h	/^        inline void             SetName(const std::string val){name = val;};$/;"	f	class:LinkedListNode
 SetNext	../Linked_List_ex/include/Linked_List.h	/^        inline void             SetNext(LinkedListNode* const val){next = val;};$/;"	f	class:LinkedListNode
+Union	./Union_Find.cpp	/^bool UnionFind::Union(LinkedListNode* const u_node, LinkedListNode* const v_node){$/;"	f	class:UnionFind
 UnionFind	./include/Union_Find.h	/^        UnionFind(){};$/;"	f	class:UnionFind
 UnionFind	./include/Union_Find.h	/^class UnionFind{$/;"	c
-_LINKED_LIST_H_	../Linked_List_ex/include/Linked_List.h	2;"	d
-_UNION_FIND_H_	./include/Union_Find.h	2;"	d
+_LINKED_LIST_H_	../Linked_List_ex/include/Linked_List.h	/^#define _LINKED_LIST_H_$/;"	d
+_UNION_FIND_H_	./include/Union_Find.h	/^#define _UNION_FIND_H_$/;"	d
 data	../Linked_List_ex/include/Linked_List.h	/^        int data;$/;"	m	class:LinkedListNode
 first	../Linked_List_ex/include/Linked_List.h	/^        LinkedListNode* first;$/;"	m	class:LinkedList
 last	../Linked_List_ex/include/Linked_List.h	/^        LinkedListNode* last;$/;"	m	class:LinkedList
