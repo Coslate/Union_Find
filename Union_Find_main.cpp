@@ -167,6 +167,7 @@ int main(){
 
     a1.PrintParent(z_node);
     a1.PrintWeight(a1.Find(z_node));
+    std::cout<<"a1.max_weight = "<<a1.GetMaxWeight()<<std::endl;
 
     return EXIT_SUCCESS;
 }

@@ -10,9 +10,15 @@ void UnionFind::Link(LinkedListNode* const u_node, LinkedListNode* const v_node)
     if(weight[u_node] > weight[v_node]){
         parent[v_node] = u_node;
         weight[u_node] += weight[v_node];
+        if(weight[u_node] > max_weight){
+            max_weight = weight[u_node];
+        }
     }else{
         parent[u_node] = v_node;
         weight[v_node] += weight[u_node];
+        if(weight[v_node] > max_weight){
+            max_weight = weight[v_node];
+        }
     }
 }
 bool UnionFind::Union(LinkedListNode* const u_node, LinkedListNode* const v_node){

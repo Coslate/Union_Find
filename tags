@@ -23,6 +23,7 @@ GetData	../Linked_List/include/Linked_List.h	/^        inline int              G
 GetFristNode	../Linked_List/include/Linked_List.h	/^        inline LinkedListNode*  GetFristNode(){return first;};$/;"	f	class:LinkedList
 GetLastNode	../Linked_List/include/Linked_List.h	/^        inline LinkedListNode*  GetLastNode(){return last;};$/;"	f	class:LinkedList
 GetListSize	../Linked_List/include/Linked_List.h	/^        inline int              GetListSize(){return size_of_list;};$/;"	f	class:LinkedList
+GetMaxWeight	./include/Union_Find.h	/^        inline          int     GetMaxWeight(){return max_weight;};$/;"	f	class:UnionFind
 GetName	../Linked_List/include/Linked_List.h	/^        inline std::string      GetName(){return name;};$/;"	f	class:LinkedListNode
 GetNext	../Linked_List/include/Linked_List.h	/^        inline LinkedListNode*  GetNext(){return next;};$/;"	f	class:LinkedListNode
 INCLUDE_FILES	../Linked_List/Makefile	/^INCLUDE_FILES = .\/include$/;"	m
@@ -64,7 +65,7 @@ SetData	../Linked_List/include/Linked_List.h	/^        inline void             S
 SetName	../Linked_List/include/Linked_List.h	/^        inline void             SetName(const std::string val){name = val;};$/;"	f	class:LinkedListNode
 SetNext	../Linked_List/include/Linked_List.h	/^        inline void             SetNext(LinkedListNode* const val){next = val;};$/;"	f	class:LinkedListNode
 Union	./Union_Find.cpp	/^bool UnionFind::Union(LinkedListNode* const u_node, LinkedListNode* const v_node){$/;"	f	class:UnionFind
-UnionFind	./include/Union_Find.h	/^        UnionFind(){};$/;"	f	class:UnionFind
+UnionFind	./include/Union_Find.h	/^        UnionFind(){max_weight = 1;};$/;"	f	class:UnionFind
 UnionFind	./include/Union_Find.h	/^class UnionFind{$/;"	c
 _LINKED_LIST_H_	../Linked_List/include/Linked_List.h	/^#define _LINKED_LIST_H_$/;"	d
 _UNION_FIND_H_	./include/Union_Find.h	/^#define _UNION_FIND_H_$/;"	d
@@ -73,6 +74,7 @@ first	../Linked_List/include/Linked_List.h	/^        LinkedListNode* first;$/;"	
 last	../Linked_List/include/Linked_List.h	/^        LinkedListNode* last;$/;"	m	class:LinkedList
 main	../Linked_List/Linked_List_main.cpp	/^int main(){$/;"	f
 main	./Union_Find_main.cpp	/^int main(){$/;"	f
+max_weight	./include/Union_Find.h	/^    int max_weight;$/;"	m	class:UnionFind
 name	../Linked_List/include/Linked_List.h	/^        std::string name;$/;"	m	class:LinkedListNode
 next	../Linked_List/include/Linked_List.h	/^        LinkedListNode* next;$/;"	m	class:LinkedListNode
 parent	./include/Union_Find.h	/^    std::unordered_map<LinkedListNode*, LinkedListNode*> parent;$/;"	m	class:UnionFind
