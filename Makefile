@@ -1,9 +1,9 @@
 #declare variable
 CC = g++
-INCLUDE_FILES = ./include ../Linked_List_ex/include
+INCLUDE_FILES = ./include ../Linked_List/include
 INCLUDE_FLAGS = $(foreach d, $(INCLUDE_FILES), -I $d)
 CTAGS_UTIL = /usr/local/bin/
-CTAGS_FILES = ./include ../Linked_List_ex ../Linked_List_ex/include
+CTAGS_FILES = ./include ../Linked_List ../Linked_List/include
 CTAGS_FLAGS = $(foreach d, $(CTAGS_FILES),-a $d/*)
 CFLAGS = -g -Wall -O3 -std=c++11 
 COMPILE_FLAGS = -c
