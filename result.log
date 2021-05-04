@@ -1,90 +1,87 @@
-rm -rf ../exec_output/Union_Find.o
-rm -rf ../exec_output/Union_Find_main.o
-rm -rf ./tags
-g++ -g -Wall -O3 -std=c++11  -c Union_Find.cpp  -I ./include  -I ../Linked_List/include -o ../exec_output/Union_Find.o
-/usr/local/bin/ctags -R ./*
-/usr/local/bin/ctags -a ./include/* -a ../Linked_List/* -a ../Linked_List/include/*
-g++ -g -Wall -O3 -std=c++11   -I ./include  -I ../Linked_List/include ../exec_output/Union_Find.o Union_Find_main.cpp -o ../exec_output/Union_Find_main.o
-../exec_output/Union_Find_main.o
 ==============Initialize=================
-b = (0x7fa1d8c03270, b, 1)
-c = (0x7fa1d8c032a0, c, 2)
-g = (0x7fa1d8c032d0, g, 100)
-f = (0x7fa1d8c03300, f, 31)
-d = (0x7fa1d8c03370, d, 99)
-a = (0x7fa1d8c03330, a, 57)
-z = (0x7fa1d8c033a0, z, 66)
+b = (0x7f9cdb4057f0, b, 1)
+c = (0x7f9cdb405850, c, 2)
+g = (0x7f9cdb4058b0, g, 100)
+f = (0x7f9cdb405910, f, 31)
+d = (0x7f9cdb4059d0, d, 99)
+a = (0x7f9cdb405970, a, 57)
+z = (0x7f9cdb405a30, z, 66)
 ==============Original=================
-b's connected component = (0x7fa1d8c03270, b, 1)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032d0, g, 100)
-f's connected component = (0x7fa1d8c03300, f, 31)
-d's connected component = (0x7fa1d8c03370, d, 99)
-a's connected component = (0x7fa1d8c03330, a, 57)
-z's connected component = (0x7fa1d8c033a0, z, 66)
+b's connected component = (0x7f9cdb4057f0, b, 1)
+c's connected component = (0x7f9cdb405850, c, 2)
+g's connected component = (0x7f9cdb4058b0, g, 100)
+f's connected component = (0x7f9cdb405910, f, 31)
+d's connected component = (0x7f9cdb4059d0, d, 99)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
 ==============Union(b, c)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032d0, g, 100)
-f's connected component = (0x7fa1d8c03300, f, 31)
-d's connected component = (0x7fa1d8c03370, d, 99)
-a's connected component = (0x7fa1d8c03330, a, 57)
-z's connected component = (0x7fa1d8c033a0, z, 66)
+b's connected component = (0x7f9cdb405850, c, 2)
+c's connected component = (0x7f9cdb405850, c, 2)
+g's connected component = (0x7f9cdb4058b0, g, 100)
+f's connected component = (0x7f9cdb405910, f, 31)
+d's connected component = (0x7f9cdb4059d0, d, 99)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
+parent[b] = c
+rank[c] = 1
 ==============Union(g, b)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032a0, c, 2)
-f's connected component = (0x7fa1d8c03300, f, 31)
-d's connected component = (0x7fa1d8c03370, d, 99)
-a's connected component = (0x7fa1d8c03330, a, 57)
-z's connected component = (0x7fa1d8c033a0, z, 66)
+b's connected component = (0x7f9cdb405850, c, 2)
+c's connected component = (0x7f9cdb405850, c, 2)
+g's connected component = (0x7f9cdb405850, c, 2)
+f's connected component = (0x7f9cdb405910, f, 31)
+d's connected component = (0x7f9cdb4059d0, d, 99)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
 parent[g] = c
-weight[c] = 3
+rank[c] = 1
 ==============Union(f, z)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032a0, c, 2)
-f's connected component = (0x7fa1d8c033a0, z, 66)
-d's connected component = (0x7fa1d8c03370, d, 99)
-a's connected component = (0x7fa1d8c03330, a, 57)
-z's connected component = (0x7fa1d8c033a0, z, 66)
-==============Union(d, a)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032a0, c, 2)
-f's connected component = (0x7fa1d8c033a0, z, 66)
-d's connected component = (0x7fa1d8c03330, a, 57)
-a's connected component = (0x7fa1d8c03330, a, 57)
-z's connected component = (0x7fa1d8c033a0, z, 66)
-==============Union(g, a)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032a0, c, 2)
-f's connected component = (0x7fa1d8c033a0, z, 66)
-d's connected component = (0x7fa1d8c032a0, c, 2)
-a's connected component = (0x7fa1d8c032a0, c, 2)
-z's connected component = (0x7fa1d8c033a0, z, 66)
-parent[a] = c
-weight[c] = 5
-==============Union(b, a)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032a0, c, 2)
-f's connected component = (0x7fa1d8c033a0, z, 66)
-d's connected component = (0x7fa1d8c032a0, c, 2)
-a's connected component = (0x7fa1d8c032a0, c, 2)
-z's connected component = (0x7fa1d8c033a0, z, 66)
+b's connected component = (0x7f9cdb405850, c, 2)
+c's connected component = (0x7f9cdb405850, c, 2)
+g's connected component = (0x7f9cdb405850, c, 2)
+f's connected component = (0x7f9cdb405a30, z, 66)
+d's connected component = (0x7f9cdb4059d0, d, 99)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
 parent[f] = z
-weight[z] = 2
+rank[z] = 1
+==============Union(d, a)=================
+b's connected component = (0x7f9cdb405850, c, 2)
+c's connected component = (0x7f9cdb405850, c, 2)
+g's connected component = (0x7f9cdb405850, c, 2)
+f's connected component = (0x7f9cdb405a30, z, 66)
+d's connected component = (0x7f9cdb405970, a, 57)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
+parent[d] = a
+rank[a] = 1
+==============Union(g, a)=================
+b's connected component = (0x7f9cdb405970, a, 57)
+c's connected component = (0x7f9cdb405970, a, 57)
+g's connected component = (0x7f9cdb405970, a, 57)
+f's connected component = (0x7f9cdb405a30, z, 66)
+d's connected component = (0x7f9cdb405970, a, 57)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
+parent[a] = a
+rank[a] = 2
+==============Union(b, a)=================
+b's connected component = (0x7f9cdb405970, a, 57)
+c's connected component = (0x7f9cdb405970, a, 57)
+g's connected component = (0x7f9cdb405970, a, 57)
+f's connected component = (0x7f9cdb405a30, z, 66)
+d's connected component = (0x7f9cdb405970, a, 57)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405a30, z, 66)
+parent[f] = z
+rank[z] = 1
 ==============Union(f, b)=================
-b's connected component = (0x7fa1d8c032a0, c, 2)
-c's connected component = (0x7fa1d8c032a0, c, 2)
-g's connected component = (0x7fa1d8c032a0, c, 2)
-f's connected component = (0x7fa1d8c032a0, c, 2)
-d's connected component = (0x7fa1d8c032a0, c, 2)
-a's connected component = (0x7fa1d8c032a0, c, 2)
-z's connected component = (0x7fa1d8c032a0, c, 2)
-parent[z] = c
-weight[c] = 7
-a1.max_weight = 7
-It is UnionFind destructor.
+b's connected component = (0x7f9cdb405970, a, 57)
+c's connected component = (0x7f9cdb405970, a, 57)
+g's connected component = (0x7f9cdb405970, a, 57)
+f's connected component = (0x7f9cdb405970, a, 57)
+d's connected component = (0x7f9cdb405970, a, 57)
+a's connected component = (0x7f9cdb405970, a, 57)
+z's connected component = (0x7f9cdb405970, a, 57)
+parent[z] = a
+rank[a] = 2
+a1.max_rank = 2

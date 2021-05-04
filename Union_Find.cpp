@@ -4,7 +4,7 @@
 #include <Union_Find.h>
 
 UnionFind::~UnionFind(){
-    std::cout<<"It is UnionFind destructor."<<std::endl;
+    //std::cout<<"It is UnionFind destructor."<<std::endl;
 }
 //Union by rank
 void UnionFind::Link(LinkedListNode* const u_node, LinkedListNode* const v_node){
@@ -23,12 +23,43 @@ void UnionFind::Link(LinkedListNode* const u_node, LinkedListNode* const v_node)
         }
     }
 }
+//Union by rank
+void UnionFind::Link(LinkedListNode* const u_node, LinkedListNode* const v_node, bool &merge_left_to_right){
+    if(rank[u_node] > rank[v_node]){
+        parent[v_node] = u_node;
+        merge_left_to_right = false;
+        if(rank[u_node] > max_rank){
+            max_rank = rank[u_node];
+        }
+    }else{
+        parent[u_node] = v_node;
+        merge_left_to_right = true;
+        if(rank[v_node] == rank[u_node]){
+            rank[v_node] += 1;
+        }
+        if(rank[v_node] > max_rank){
+            max_rank = rank[v_node];
+        }
+    }
+}
 bool UnionFind::Union(LinkedListNode* const u_node, LinkedListNode* const v_node){
     bool complete_union = false;
     LinkedListNode* par_u = FindIterative(u_node);
     LinkedListNode* par_v = FindIterative(v_node);
     if(par_u != par_v){
         Link(par_u, par_v);
+        complete_union = true;
+    }
+
+    return complete_union;
+}
+bool UnionFind::Union(LinkedListNode* const u_node, LinkedListNode* const v_node, bool &merge_left_to_right){
+    bool complete_union = false;
+    merge_left_to_right = false;
+    LinkedListNode* par_u = FindIterative(u_node);
+    LinkedListNode* par_v = FindIterative(v_node);
+    if(par_u != par_v){
+        Link(par_u, par_v, merge_left_to_right);
         complete_union = true;
     }
 

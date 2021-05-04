@@ -12,12 +12,14 @@ class UnionFind{
 
     protected : 
         void Link(LinkedListNode* const u_node, LinkedListNode* const v_node);
+        void Link(LinkedListNode* const u_node, LinkedListNode* const v_node, bool &merge_left_to_right);
 
     public : 
         UnionFind(){max_rank = 1;};
         ~UnionFind();
 
         bool                    Union(LinkedListNode* const u_node, LinkedListNode* const v_node);
+        bool                    Union(LinkedListNode* const u_node, LinkedListNode* const v_node, bool &merge_left_to_right);
         LinkedListNode*         Find(LinkedListNode* const u_node);
         LinkedListNode*         FindIterative(LinkedListNode* const u_node);
         inline          void    PrintParent(LinkedListNode* const u_node){std::cout<<"parent["<<u_node->GetName()<<"] = "<<parent[u_node]->GetName()<<std::endl;};
